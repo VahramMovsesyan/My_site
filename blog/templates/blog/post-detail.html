@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    This Post Title
+{% endblock title %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'blog/post-detail.css' %}">
+{% endblock %} 
+
+{% block content %}
+    <section id="summary">
+        <h2>Post Title</h2>
+        <article>
+            <img src="{% static 'blog/images/mountains.jpg' %}" alt="Post Title">
+            <address>By Vahram</address>
+            <div>
+                Last update on <time>July 10th</time>
+            </div>
+        </article>
+    </section>
+
+    <main>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum deleniti, 
+            eaque sed et neque in, provident tempore dicta, ipsa sint quaerat!
+             Asperiores tenetur quae est iusto enim eum amet atque.
+        </p>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum deleniti, 
+            eaque sed et neque in, provident tempore dicta, ipsa sint quaerat!
+             Asperiores tenetur quae est iusto enim eum amet atque.
+        </p>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum deleniti, 
+            eaque sed et neque in, provident tempore dicta, ipsa sint quaerat!
+             Asperiores tenetur quae est iusto enim eum amet atque.
+        </p>
+    </main>
+{% endblock %}
