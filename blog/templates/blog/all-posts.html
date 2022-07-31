@@ -17,12 +17,9 @@
         <ul>
             <li>
                 <article>
-                    {% include 'blog/includes/post.html' %}
-                    {% include 'blog/includes/post.html' %}
-                    {% include 'blog/includes/post.html' %}
-                    {% include 'blog/includes/post.html' %}
-                    {% include 'blog/includes/post.html' %}
-                    {% include 'blog/includes/post.html' %}
+                    {% for post in all_posts %}
+                        {% include 'blog/includes/post.html' %}
+                    {% endfor %}
                 </article>
             </li>
         </ul>
