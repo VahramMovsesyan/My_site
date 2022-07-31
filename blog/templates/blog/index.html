@@ -16,14 +16,16 @@
             <img src="{% static 'blog/images/Vahram1.jpg' %}" alt="Vahram - The Author Of This Blog">
             <h2>MOVSESYAN'S BLOG</h2>
         </header>
-        <p>Hi, I am Vahram and i learning django and building my own Blog!</p>
+        <p>Hi, I am Vahram and i learning django <br> and building my own dynamic Blog!</p>
     </section>
 
     <section id="latest-posts">
         <h2>My latest Thoughts</h2>
 
         <ul>
-            {% include 'blog/includes/post.html' %}
+            {% for post in posts %}
+                {% include 'blog/includes/post.html' %}
+            {% endfor %}
         </ul>
     </section>
 
