@@ -16,9 +16,9 @@ class Book(models.Model):
     title = models.CharField(max_length=50)
     rating = models.IntegerField(
         validators=[MinValueValidator(1), MaxValueValidator(5)])
-    author = models.ForeignKey(Author, on_delete=models.CASCADE, null=True)  
-    # CASCADE tells Django and SQL that if a author should be deleted any related book also should be deleted 
-    
+    author = models.ForeignKey(Author, on_delete=models.CASCADE, null=True)
+    # CASCADE tells Django and SQL that if a author should be deleted any related book also should be deleted
+
     is_bestselling = models.BooleanField(default=False)
     slug = models.SlugField(default="", blank=True, null=False, db_index=True)
     # Django will automatically create the ID column with autoincrement
