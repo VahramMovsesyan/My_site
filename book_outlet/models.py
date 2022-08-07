@@ -1,14 +1,13 @@
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
-from django.forms import CharField
 from django.urls import reverse
 
 
 # Create your models here.
 
 class Author(models.Model):
-    first_name = CharField(max_length=100)
-    last_name = CharField(max_length=100)
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
 
 
 class Book(models.Model):
