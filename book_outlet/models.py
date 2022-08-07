@@ -5,9 +5,17 @@ from django.urls import reverse
 
 # Create your models here.
 
+
+class Adress(models.Model):
+    street = models.CharField(max_length=80)
+    postal_code = models.CharField(max_length=5)
+    city = models.CharField(max_length=50)
+
+
 class Author(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
+    adress = models.OneToOneField(Adress, on_delete=models.CASCADE, null=True)  # set up one-to-one relation
 
     def full_name(self):
         return f"{self.first_name} {self.last_name}"
