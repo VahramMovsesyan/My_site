@@ -10,7 +10,11 @@ class Country(models.Model):
     name = models.CharField(max_length=80)
     code = models.CharField(max_length=2)
 
+    class Meta:
+        verbose_name_plural = "Countries"
 
+    def __str__(self):
+        return self.name
 
 
 class Address(models.Model):
