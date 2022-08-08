@@ -49,7 +49,7 @@ class Book(models.Model):
     is_bestselling = models.BooleanField(default=False)
     slug = models.SlugField(default="", blank=True, null=False, db_index=True)
     # Django will automatically create the ID column with autoincrement
-    Published_countries = models.ManyToManyField(Country)  # here we can't use on_delete option
+    published_countries = models.ManyToManyField(Country)  # here we can't use on_delete option
 
     def get_absolute_url(self):
         return reverse("book-detail", args=[self.slug])
