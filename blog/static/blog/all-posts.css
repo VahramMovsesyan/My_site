@@ -29,14 +29,13 @@ ul {
 
 article{
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  
 }
 article > li {
   padding: 1rem;
   max-width: 20rem;
+  width: 100%;
 }
 
 .post img {

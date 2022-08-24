@@ -8,13 +8,14 @@ body {
 }
 
 #summary {
+  display: flex;
+  justify-content: space-between;
   margin: 8rem auto 3rem auto;
   padding: 2rem;
   width: 90%;
   max-width: 90rem;
   border-radius: 16px;
   background-color: #5706c0;
-  position: relative;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   height: 22rem;
 }
@@ -22,13 +23,11 @@ body {
 #summary h2 {
   color: white;
   font-size: 4.5rem;
-  margin-bottom: 0.25rem;
+  margin: 1rem 0;
+  overflow:visible;
 }
 
 #summary article {
-  position: absolute;
-  top: 2rem;
-  right: 3rem;
   padding: 1rem 2rem;
   border-radius: 12px;
   text-align: right;
@@ -36,8 +35,9 @@ body {
 }
 
 #summary article img {
-  width: 12rem;
-  height: 12rem;
+  max-width: 12rem;
+  width: 100%;
+  max-height: 12rem;
   border-radius: 12px;
   transform: rotateZ(5deg);
   border: 5px solid white;
@@ -67,12 +67,23 @@ main {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
+.detail{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tags-section {
+  min-height: 50px;
+  margin-bottom: 20px;
+}
+
 .tag {
   background-color: white;
   color: #390281;
   padding: 0.5rem 1rem;
   border-radius: 8px;
-  
+  font-size: 20px;
 }
 
 #comment-form {
@@ -83,6 +94,10 @@ main {
   background-color: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   padding: 1rem;
+}
+
+#comment-form h2 {
+  text-align: center;
 }
 
 #comment-form button {
@@ -190,4 +205,20 @@ main {
   font-size: 30px;
   text-align: center;
   margin-top: 0;
+}
+
+@media screen and (max-width: 900px) {
+  #summary {
+    padding: 2rem 4vw;
+  }
+  
+  #summary h2 {
+    font-size: calc(1rem + 5vw);
+  }
+
+  .tag {
+    display: inline-block;
+    margin: 3px 0;
+  }
+  
 }
