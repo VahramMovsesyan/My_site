@@ -14,7 +14,8 @@
     <header id="main-navigation">
         <h2><a href="{% url 'starting-page' %}">Vahram' Blog</a></h2>
         <nav>
-            <a href="{% url 'posts-page' %}">All Posts</a>
+            <a id="stored-posts" class="{% if has_posts  %}hide{% endif %}" href="{% url 'read-later' %}">Stored Posts</a>
+            <a id="all-posts" href="{% url 'posts-page' %}">All Posts</a>
         </nav>
     </header>
     {% block content %}{% endblock %}
