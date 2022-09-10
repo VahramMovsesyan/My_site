@@ -1,5 +1,18 @@
+body::-webkit-scrollbar {
+    width: 0;
+    
+}
+#progressbar{
+    position:fixed;
+    top: 0;
+    right: 0;
+    width: 15px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(51,0,117,1) 17%, rgba(111,0,255,1) 66%, rgba(228,137,0,0.9) 100%);
+}
+
 #welcome {
-    background: linear-gradient(to right top, #6305dd, #390281);
+    background: linear-gradient(45deg, rgba(111,0,255,1) 10%, rgba(51,0,117,1) 70%);
     padding: 6rem 12%;
 }
   
@@ -85,4 +98,17 @@
     #welcome  h2 {
         font-size: 5vw;
     }
+}
+
+@media screen and (max-width: 420px) {
+
+    #welcome p,
+    #about p {
+        font-size: 1.1rem;
+    }
+
+    #progressbar{
+        width: 10px;
+    }
+
 }

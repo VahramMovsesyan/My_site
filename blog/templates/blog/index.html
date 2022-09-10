@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-    My Blog
+    MV Blog
 {% endblock title %}
 
 {% block css_files %}
@@ -41,5 +41,18 @@
             the same, I'd be very happy!
         </p>
     </section>
+
+    <div id="progressbar"></div>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(window).scroll(function(){
+            var scroll = $(window).scrollTop(),
+            dh = $(document).height(),
+            wh = $(window).height();
+            scrollPercent = (scroll / (dh-wh)) * 100;
+            $('#progressbar').css('height', scrollPercent + '%')
+        })
+    </script>
 
 {% endblock content %}

@@ -1,0 +1,14 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+
+{% block title %}
+MVBlog Admin
+{% endblock title %}
+
+{% block extrahead %}
+    <link rel="shortcut icon" href="{% static 'blog/images/admin_favicon.ico' %}" />
+{% endblock %}
+
+{% block branding %}
+        <h1 id="site-name"><a href="{% url 'admin:index' %}">MV Blog Administraton</a></h1>
+    {% endblock %}

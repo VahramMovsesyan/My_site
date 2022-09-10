@@ -7,12 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock  %}</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'blog/images/favicon.ico' %}">
     <link rel="stylesheet" href="{% static 'app.css' %}">
     {% block css_files %}{% endblock %}
 </head>
 <body>
     <header id="main-navigation">
-        <h2><a href="{% url 'starting-page' %}">Vahram' Blog</a></h2>
+        <h2><a href="{% url 'starting-page' %}">Home</a></h2>
         <nav>
             <a id="stored-posts" href="{% url 'read-later' %}">Stored Posts</a>
             <a id="all-posts" href="{% url 'posts-page' %}">All Posts</a>

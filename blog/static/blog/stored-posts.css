@@ -62,3 +62,10 @@ p{
 .stored-posts-list a:active {
     color: rgba(57, 2, 129, 1);
 }
+
+@media screen and (max-width: 420px) {
+    
+    .error-massage{
+        margin: 10rem 1rem 0rem 1rem;
+    }
+}

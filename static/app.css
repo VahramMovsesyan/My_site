@@ -1,15 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  font-family: 'Open Sans', 'Lato', sans-serif;
-}
-
 body {
-  margin: 0;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
 }
 
 h1,

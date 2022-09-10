@@ -87,6 +87,10 @@ main {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
+main p{
+  margin: 5px 0;
+}
+
 .detail{
   display: flex;
   flex-direction: column;
@@ -128,6 +132,7 @@ main {
   padding: 0.5rem 1.5rem;
   border-radius: 6px;
   cursor: pointer;
+  width: 100%;
 }
 
 #comment-form button:hover,
