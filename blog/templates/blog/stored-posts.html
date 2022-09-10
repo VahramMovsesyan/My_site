@@ -15,13 +15,14 @@ Stored Posts
             <div class="error-massage">
                 <p>You didn't save any posts for later.</p>
             </div>
+        {% else %}
+            <ol>
+                <p>Stored Posts</p>
+                <hr>
+                {% for post in posts %}
+                <li class="stored-posts-list"><a href="{% url 'post-detail-page' post.slug %}">{{post.title}}</a></li><hr>
+                {% endfor %}
+            </ol>
         {% endif %}
-        <ol>
-            <p>Stored Posts</p>
-            <hr>
-            {% for post in posts %}
-            <li class="stored-posts-list"><a href="{% url 'post-detail-page' post.slug %}">{{post.title}}</a></li><hr>
-            {% endfor %}
-        </ol>
     </section>
 {% endblock content %}

@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
+{% load static %}
 
+{% block css_files %}
+    <link rel="stylesheet" href="{% static '404.css' %}">
+{% endblock %}
 
 {% block title %}
     We didn't fint that page!
@@ -7,6 +11,15 @@
 
 
 {% block content %} 
-    <h2>We're sorry!</h2>
-    <p>But we could'n find that page!</p>
+    <div id="container">
+        <div class="emoji emoji--sad">
+            <div class="emoji__face">
+              <div class="emoji__eyebrows"></div>
+              <div class="emoji__eyes"></div>
+              <div class="emoji__mouth"></div>
+            </div>
+        </div>
+        <h2>We're sorry!</h2>
+        <p>But we could'n find that page!</p>
+    </div>
 {% endblock content %}
