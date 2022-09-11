@@ -21,13 +21,13 @@
 
     <section id="summary">
         <div class="detail">
-            <h2>{{ post.title }}</h2>
-            <div class="tags-section">
+            <h2 class="grid">{{ post.title }}</h2>
+            <div class="tags-section grid">
                 {% for tag in post_tags %}
                     <span class="tag">#{{ tag.caption }}</span>
                 {% endfor %}
             </div>
-            <div id="read-later">
+            <div id="read-later" class="grid">
                 <form action="{% url 'read-later' %}" method="POST">
                     {% csrf_token %}
                     <input type="hidden" value="{{ post.id }}" name="post_id">
@@ -42,7 +42,7 @@
             </div>
         </div>
         
-        <article>
+        <article class="grid">
             <img src="{{ post.image.url }}" alt="{{ post.title }}">
             <address>By <a href="mailto:{{ post.author.email_address }}">{{ post.author }}</a></address>
             <div>
