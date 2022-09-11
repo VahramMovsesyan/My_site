@@ -40,15 +40,14 @@
                     </button>
                 </form>
             </div>
+            <article class="grid">
+                <img src="{{ post.image.url }}" alt="{{ post.title }}">
+                <address>By <a href="mailto:{{ post.author.email_address }}">{{ post.author }}</a></address>
+                <div>
+                    Last update on <time>{{ post.date|date:"d M Y" }}</time>
+                </div>
+            </article>
         </div>
-        
-        <article class="grid">
-            <img src="{{ post.image.url }}" alt="{{ post.title }}">
-            <address>By <a href="mailto:{{ post.author.email_address }}">{{ post.author }}</a></address>
-            <div>
-                Last update on <time>{{ post.date|date:"d M Y" }}</time>
-            </div>
-        </article>
     </section>
 
     <main>
