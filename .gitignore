@@ -1,3 +1,4 @@
 django_my_site
 __pycache__
 *.zip
+migrations

@@ -62,6 +62,9 @@
                     <li>
                         <h2>{{ comment.user_name }}</h2>
                         <p>{{ comment.text|linebreaks }}</p>
+                        {% if comment.date %}
+                            <p class="comment-date">{{ comment.date }}</p>
+                        {% endif %}
                     </li>
                 {% endfor %}
             </ul>
