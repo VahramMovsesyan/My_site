@@ -116,11 +116,11 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Etc/GMT+4'
+TIME_ZONE = 'Etc/GMT-4'
 
 USE_I18N = True
 
-USE_TZ = False
+USE_TZ = False  
 
 
 # Static files (CSS, JavaScript, Images)
