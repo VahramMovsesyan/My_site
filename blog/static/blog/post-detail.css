@@ -135,6 +135,12 @@ main p {
   margin: 0 3px;
 }
 
+.comment-date{
+  color: gray;
+  text-align: right;
+  font-size: 13px;
+}
+
 #comment-form {
   margin: 3rem auto;
   width: 90%;
